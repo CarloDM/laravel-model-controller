@@ -6,7 +6,30 @@
 @section('content')
 <div class="container">
   <h1>cinema</h1>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil excepturi natus autem exercitationem veritatis eius dolorum laborum asperiores officiis veniam.</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">date</th>
+        <th scope="col">vote</th>
+      </tr>
+    </thead>
+    <tbody>
+      @foreach ($movies as $movie )
+        <tr>
+          <th scope="row">{{$movie->id}}</th>
+          <td>{{$movie->title}}</td>
+          <td>{{$movie->date}}</td>
+          <td>{{$movie->vote}}</td>
+
+        </tr>
+
+      @endforeach
+
+    </tbody>
+
+  </table>
 
 </div>
 
