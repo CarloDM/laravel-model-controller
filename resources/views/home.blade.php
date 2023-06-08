@@ -5,6 +5,7 @@
 
 @section('content')
 <div class="container">
+
   <h1>cinema</h1>
   <table class="table">
     <thead>
@@ -22,14 +23,14 @@
           <td>{{$movie->title}}</td>
           <td>{{$movie->date}}</td>
           <td>{{$movie->vote}}</td>
+          <td><a href="{{route('search', ['id'=> $movie->id])}}">card</a></td>
 
         </tr>
 
       @endforeach
-
     </tbody>
-
   </table>
+  <p>{{$movieProva->title}}</p>
 
 </div>
 
